@@ -1,6 +1,6 @@
 var mains = document.getElementsByTagName('main');
 var main = mains[0];
-main.innerHTML= '<article> <section> <p> diferencia</p> <p> ciudad</p> </section> <section> hora </section></article> <hr>';
+main.innerHTML= '<article> <section> <p> Diferencia</p> <p> Ciudad</p> </section> <section> Hora </section></article> <hr>';
 
 function ponerCero(i){
     if (i < 10){
@@ -39,7 +39,6 @@ function reloj(ciudad, desfase){
 
     var eshoy= esHoy(nd);
 
-
     return `
     <article> <section> <p>${eshoy} ${desfase}H</p> <p> ${ciudad}</p> </section> <section> ${h}:${m}:${s} </section></article> <hr>`;
 
@@ -51,7 +50,7 @@ var arrayCiudades = [
     {ciudad: 'Los Ángeles', desfase: '-9'},
     {ciudad: 'Nueva York', desfase: '-6'},
     {ciudad: 'Sidney', desfase: '+8'},
-    {ciudad: 'prueba', desfase: '-23'}
+    {ciudad: 'Prueba', desfase: '-23'}
 ]
 
 window.setInterval(function(){
@@ -61,6 +60,12 @@ window.setInterval(function(){
         var texto = reloj(objetos.ciudad, objetos.desfase)
         resultado = resultado + texto
     }
-
+    
     main.innerHTML = resultado;
+    
 },500)
+
+// Intento de guardar la info de las ciudades en un json para poder añadir ciudades y cargar los datos para la función desde ahí, pero no me da tiempo a esa parte
+fetch('../js/data.json')
+.then(response => response.json())
+.then(json => console.log(json));

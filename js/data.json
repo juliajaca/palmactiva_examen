@@ -1,0 +1,6 @@
+{"arrayCiudades": [{"ciudad": "Madrid", "desfase":"+0"},
+{"ciudad": "Londres", "desfase": "-1"},
+{"ciudad": "Los Ángeles", "desfase": "-9"},
+{"ciudad": "Nueva York", "desfase": "-6"},
+{"ciudad": "Sidney", "desfase": "+8"},
+{"ciudad": "Prueba", "desfase": "-23"}]}
