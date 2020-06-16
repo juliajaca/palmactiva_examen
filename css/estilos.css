@@ -1,0 +1,31 @@
+html{
+    font-size: 16px;
+    
+    /* 1rem = 16px */
+    /* para tamaños de letras, padding, etc, se pone en rem calculando la proporción . Esto hace que los tamaños sean responsive*/
+}
+
+body{
+    color: antiquewhite;
+    background-color: black;
+    padding: 20px;;
+}
+
+header {
+    height: 16vh;
+    display: flex;
+    /* horizontal */
+    justify-content: space-between;
+    /* vertical */
+    align-items: center;
+}
+
+header h1{
+    text-transform: capitalize;
+    align-self: flex-end;
+}
+
+header button{
+    align-self: flex-start;
+
+}
